@@ -13,7 +13,7 @@ model.add(Dense(5380, input_dim=19, activation='relu'))
 model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
 
 model.fit(X, Y, epochs=150, batch_size=5380)
 
